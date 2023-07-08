@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+</head>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <header>
+        <h1>JH</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutme.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resume.html">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="content-section">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <main class="about-me-section">
+            <div class="about-me-container">
+                <div class="about-me-text">
+                    <h1>About Me</h1>
+                    <p>I love to watch and play all sports. My passions are in cooking, mountain climbing, gaming, and golf. Aspiring Sports Biomechanist.</p>
+                </div>
+                <div class="about-me-image">
+                    <img src="assets/things/FNbMbn7VIAAWZMK.jpg" alt="Jason Hashimoto">
+                </div>
+            </div>
+            <div id="skills-section">
+                <div class="skills-header">
+                    <h2>Skills</h2>
+                </div>
+                <div id="star-legend">
+                    <p6>and ratings for said skills</p6>
+                    <p>Expert - <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                    <p>Advanced - <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                    <p>Basic Understanding - <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                    <p>Beginner - <i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                    <p>ChatGPT Save Me - <i class="fas fa-star"></i></p>
+                </div>
+                <div id="skills-layout">
+                    <div id="skill-category">
+                        <h3>Motion Capture</h3>
+                        <p>Proficient in setup, operation, and processing of both markerless and markered motion capture systems.</p> 
+                        <div id="star-rating"></div>
+                    </div>
+                    <div id="skills-list">
+                        <img class="arrow" src="assets/things/arrow.png" alt="arrow">
+                        <p id="cortex" data-rating="4.5">Motion Analysis</p>
+                        <p id="hawkeye" data-rating="3">Hawkeye</p>
+                        <p id="kinatrax" data-rating="4.5">KinaTrax</p>
+                        <p id="optitrack" data-rating="4">OptiTrack</p>
+                        <p id="theia" data-rating="4">Theia Markerless</p>
+                        <p id="qualisys" data-rating="4">Qualisys (QTM)</p>
+                    </div>
+                    <div id="skills-image">
+                        <img id="logo" src="" alt="Skill logo">
+                    </div>  
+                </div>
+                
+                <div id="skills-layout2">
+                    <div id="skill-category2">
+                        <h3>Sports Technology</h3>
+                        <p>Confident in multiple sports science solutions for monitoring player strength, workload and fatigue.</p> 
+                        <div id="star-rating2"></div>
+                    </div>
+                    <div id="skills-list2">
+                        <img class="arrow2" src="assets/things/arrow.png" alt="arrow">
+                        <p id="amti" data-rating="4.5">Force Plates</p>
+                        <p id="catapult" data-rating="3">IMU Wearables</p>
+                        <p id="hawkin" data-rating="3.5">Hawkin Dynamics </p>
+                        <p id="vald" data-rating="3">Vald Peformance </p>
+                    </div>
+                    <div id="skills-image2">
+                        <img id="logo2" src="" alt="Skill logo">
+                    </div>
+                </div>
+
+                <div id="skills-layout3">
+                    <div id="skill-category3">
+                        <h3>Baseball Technology</h3>
+                        <p>Extremely skilled in baseball specific technology operations and reports, accumulating years of experience with a variety of different tech, some not included here.</p> 
+                        <div id="star-rating3"></div>
+                    </div>
+                    <div id="skills-list3">
+                        <img class="arrow3" src="assets/things/arrow.png" alt="arrow">
+                        <p id="blast" data-rating="4.5">Blast Motion</p>
+                        <p id="kmotion" data-rating="4">K-Vest</p>
+                        <p id="rapsodo" data-rating="4.5">Rapsodo</p>
+                        <p id="trackman" data-rating="5">Trackman</p>
+                    </div>
+                    <div id="skills-image3">
+                        <img id="logo3" src="" alt="Skill logo">
+                    </div>
+                </div>
+
+                <div id="skills-layout4">
+                    <div id="skill-category4">
+                        <h3>Coding + Computer Programs</h3>
+                        <p>Breakdown of the coding languages that I use/have used. Currently learning linux and dabbling in some php.</p> 
+                        <div id="star-rating4"></div>
+                    </div>
+                    <div id="skills-list4">
+                        <img class="arrow4" src="assets/things/arrow.png" alt="arrow">
+                        <p id="htmlcss" data-rating="3">HTML + CSS</p>
+                        <p id="js" data-rating="1.5">JavaScript</p>
+                        <p id="linux" data-rating="3">Linux (Learning)</p>
+                        <p id="python" data-rating="4.5">Python</p>
+                        <p id="r" data-rating="4.5">R</p>
+                        <p id="visual3d" data-rating="4">Visual3D</p>
+
+                    </div>
+                    <div id="skills-image4">
+                        <img id="logo4" src="" alt="Skill logo">
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    
+    
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/jason-hashimoto" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/jason-hashimoto" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://twitter.com/jasonhashimoto1" target="_blank"><i class="fab fa-twitter"></i></a>
+            <button id="scrollToTop"><i class="fa-sharp fa-solid fa-arrow-up"></i></button>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets/js/particles.js"></script>
+    <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/scroll.js"></script>
+</body>
+</html>

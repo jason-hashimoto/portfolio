@@ -1,0 +1,970 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+/* Use a Google font for nicer typography */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+
+main {
+    flex-grow: 1;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1a1a1d; /* Dark grey background */
+    color: #ddd; /* Light grey text */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Styles for the header */
+header {
+    display: flex;
+    justify-content: space-around; /* Aligns the h1 and nav elements along the horizontal line and adds equal space around them */
+    align-items: center; /* Centers the h1 and nav elements along the vertical line */
+    background-color:'rgba(0, 0, 0, 0.0)';
+    color: #ddd;
+    padding: 10px 0;
+}
+
+header h1, header nav {
+    flex: 1; /* Gives the h1 and nav elements equal amounts of the available space */
+    margin-left: 30px;
+}
+
+header nav ul {
+    display: flex; /* Positions the li elements in a row instead of a column */
+    justify-content: space-around; /* Adds equal space around the li elements */
+    list-style: none;
+}
+
+header nav ul li {
+    margin: 0 10px; /* Adds a little space between the li elements */
+}
+
+/* Styles for the header navigation links */
+header nav ul li a {
+    color: #ddd;
+    text-decoration: none;
+    position: relative; /* Needed to position the ::after pseudo-element relative to the a element */
+}
+
+header nav ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px; /* Positions the pseudo-element just below the text */
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #DC4405; /* Change this to your desired underline color */
+    transition: width 0.3s ease;
+}
+
+header nav ul li a:hover::after {
+    width: 100%; /* Makes the underline appear on hover by changing its width to 100% */
+}
+
+header nav ul li a:hover {
+    color: #fff;
+}
+
+/* Styles for the sections */
+section {
+    padding: 20px;
+}
+
+/* Styles for the footer */
+footer {
+    background-color: #0a0a0a;
+    bottom: 0;
+    color: #ddd;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+}
+
+.social-links a {
+    color: #ddd;
+    margin: 0 10px;
+    font-size: 24px; /* Change the size of the icons here */
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: rgba(220, 68, 5); /* Change the color of the icons on hover */
+}
+
+#canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.btn-resume {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 30px;
+    border-radius: 50px; /* Adjust this value to change how rounded the button is */
+    background-color: #ddd;
+    color: black;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-resume:hover {
+    background-color: rgba(220, 68, 5); /* This is the color the button changes to when hovered */
+}
+
+.btn-resume i {
+    margin-right: 10px; /* This adds some space between the icon and the text */
+}
+
+.container-resume {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.resume-page img {
+    width: 70%;
+}
+
+#page1 img {
+    margin: 50px 0 20px 0;  /* top margin 100px, bottom margin 20px */
+}
+
+#page2 img {
+    margin: 20px 0 30px 0;
+    padding-bottom: 40px;
+}
+
+/* This will change the width of the scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* This will change the background color of the scrollbar track */
+::-webkit-scrollbar-track {
+    background: #1a1a1d;
+}
+
+/* This will change the color of the scrollbar itself */
+::-webkit-scrollbar-thumb {
+    background: #3b3a3a;
+}
+
+/* This will change the color of the scrollbar when you hover over it */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.projects-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 60px;
+    padding: 20px;
+}
+
+.projects-titles h1 {
+    font-size: 2.5em;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 60px;
+    padding: 10px;
+    padding-top: 20px;
+}
+
+.projects-titles p {
+    font-size: 1.2em;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-bottom: 20px;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Add this line */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 20px;
+    width: 400px;
+    height: 700px;  /* Set the height */
+    box-sizing: border-box;
+    transition: all .3s ease;
+}
+
+.github-link-button {
+    align-self: center;  /* Align button in the center of the card */
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #ddd;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.github-link-button:hover {
+    background-color: rgba(220, 68, 5); /* This is the color the button changes to when hovered */
+}
+
+.github-link-button i {
+    margin-right: 10px;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px 2px rgba(220, 68, 5);
+}
+.project-card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.project-card h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    height: 200px; /* Adjust this according to your needs */
+    overflow-y: auto;
+}
+
+.btn-report {
+    align-self: center;  /* Align button in the center of the card */
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #ddd;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.btn-report:hover {
+    background-color: rgba(220, 68, 5); /* This is the color the button changes to when hovered */
+}
+
+.btn-report i {
+    margin-right: 10px;
+}
+
+.content-section {
+    width: 80%;
+    margin: auto;
+}
+
+.about-me-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-me-container {
+    display: flex;
+    justify-content: space-between; /* Adjusted from space-evenly to space-between */
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.about-me-text, .about-me-image {
+    width: 50%;
+    padding: 20px; /* Added this line to add padding */
+}
+
+.about-me-text h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.about-me-text p {
+    font-size: 1.2em;
+}
+
+.about-me-image img {
+    max-width: 100%; /* Decrease this to make the portrait smaller */
+    height: auto;
+    margin: 0 auto; /* Center the image within its div */
+    display: block;
+    border-radius: 10px;
+}
+
+#skills-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+#skills-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.fas.fa-star {
+    color: rgba(220, 68, 5);/* interior color */
+}
+
+.fas.fa-star-half-alt {
+    color: rgba(220, 68, 5);
+}
+
+#skills-header {
+    display: flex;
+    justify-content: space-between; /* space the heading and legend equally across their container width */
+    align-items: flex-start; /* align them at the top */
+}
+
+.skills-header h2 {
+    flex: 1; /* make sure the h2 takes up as much space as it needs */
+    margin-right: 10px; /* add a bit of margin for spacing */
+}
+
+#star-legend p6 {
+    font-size: 1.0em;
+    margin-bottom: 30px;
+    margin-right: 20px;
+}
+
+#star-legend {
+    flex: 1; /* make sure the legend takes up as much space as it needs, adjust as necessary */
+    display: flex;
+    flex-direction: row;
+}
+
+#star-legend p:nth-child(1) {
+    margin-right: 30px;  /* adjust this value as needed */
+}
+
+#star-legend p:nth-child(2) {
+    margin-right: 30px;  /* adjust this value as needed */
+}
+
+#star-legend p:nth-child(3) {
+    margin-right: 30px;  /* adjust this value as needed */
+}
+
+#star-legend p:nth-child(4) {
+    margin-right: 30px;  /* adjust this value as needed */
+}
+
+#star-legend p:nth-child(5) {
+    margin-right: 30px;  /* adjust this value as needed */
+}
+
+/* Start of Layout 1 */
+#skills-layout {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+#skill-category {
+    position: relative;
+    flex: 1;
+    height: 300px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-right: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to the top */
+    overflow-y: auto; /* Enable scrolling if content overflows */
+}
+
+#star-rating {
+    position: absolute;
+    bottom: 20px; /* adjust as needed */
+    width: 95%;
+    text-align: left;
+}
+
+#star-rating i {
+    font-size: 2.5em; /* adjust as needed */
+}
+
+
+#skills-list {
+    position: relative;
+    width: 200px; /* set specific width */
+    height: 300px; /* set specific height */
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-right: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to the top */
+    overflow-y: auto; /* Enable scrolling if content overflows */
+}
+
+#skills-list::before {
+    content: "";
+    position: absolute;
+    right: 20px; /* Adjust as needed */
+    top: 15px; /* Adjust as needed */
+    width: 30px; /* Adjust as needed */
+    height: 260px; /* Adjust as needed */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    z-index: -1; /* Ensures it doesn't overlap the text */
+}
+
+.arrow {
+    position: absolute;
+    right: 30px;
+    top: 0;
+    width: 15px; /* Adjust width and height as needed */
+    height: 15px;
+}
+
+#skills-image {
+    flex: 1;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to the top */
+    overflow: hidden
+}
+
+#skill-category h3 {
+    font-size: 2em; /* adjust size of skill-category title */
+    text-align: left; /* align title to upper left */
+}
+
+#skill-category p {
+    text-align: left;
+    margin-top: 10px;
+}
+
+#skills-list p {
+    cursor: pointer;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    font-size: .9em;
+}
+
+#skills-list p:hover {
+    font-weight: bold;
+}
+
+#skills-image img {
+    width: 400px; /* set specific width */
+    height: 300px; /* set specific height */
+    object-fit: contain; /* ensure image maintains aspect ratio */
+    border-radius: 10px;
+    align-self: center; /* center image */
+}
+
+/* Start of Layout 2 */
+#skills-layout2 {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+#skill-category2 {
+    position: relative;
+    flex: 1;
+    height: 300px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-right: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to the top */
+    overflow-y: auto; /* Enable scrolling if content overflows */
+}
+
+#star-rating2 {
+    position: absolute;
+    bottom: 20px; /* adjust as needed */
+    width: 95%;
+    text-align: left;
+}
+
+#star-rating2 i {
+    font-size: 2.5em; /* adjust as needed */
+}
+
+
+#skills-list2 {
+    position: relative;
+    width: 200px; /* set specific width */
+    height: 300px; /* set specific height */
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-right: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to the top */
+    overflow-y: auto; /* Enable scrolling if content overflows */
+}
+
+#skills-list2::before {
+    content: "";
+    position: absolute;
+    right: 20px; /* Adjust as needed */
+    top: 15px; /* Adjust as needed */
+    width: 30px; /* Adjust as needed */
+    height: 170px; /* Adjust as needed */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    z-index: -1; /* Ensures it doesn't overlap the text */
+}
+
+.arrow2 {
+    position: absolute;
+    right: 30px;
+    top: 0;
+    width: 15px; /* Adjust width and height as needed */
+    height: 15px;
+}
+
+#skills-image2 {
+    flex: 1;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to the top */
+    overflow: hidden
+}
+
+#skill-category2 h3 {
+    font-size: 2em; /* adjust size of skill-category title */
+    text-align: left; /* align title to upper left */
+}
+
+#skill-category2 p {
+    text-align: left;
+    margin-top: 10px;
+}
+
+#skills-list2 p {
+    cursor: pointer;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    font-size: .9em;
+}
+
+#skills-list2 p:hover {
+    font-weight: bold;
+}
+
+#skills-image2 img {
+    width: 400px; /* set specific width */
+    height: 300px; /* set specific height */
+    object-fit: contain; /* ensure image maintains aspect ratio */
+    border-radius: 10px;
+    align-self: center; /* center image */
+}
+
+/* Start of Layout 3 */
+#skills-layout3 {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+#skill-category3 {
+    position: relative;
+    flex: 1;
+    height: 300px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-right: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to the top */
+    overflow-y: auto; /* Enable scrolling if content overflows */
+}
+
+#star-rating3 {
+    position: absolute;
+    bottom: 20px; /* adjust as needed */
+    width: 95%;
+    text-align: left;
+}
+
+#star-rating3 i {
+    font-size: 2.5em; /* adjust as needed */
+}
+
+
+#skills-list3 {
+    position: relative;
+    width: 200px; /* set specific width */
+    height: 300px; /* set specific height */
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-right: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to the top */
+    overflow-y: auto; /* Enable scrolling if content overflows */
+}
+
+#skills-list3::before {
+    content: "";
+    position: absolute;
+    right: 20px; /* Adjust as needed */
+    top: 15px; /* Adjust as needed */
+    width: 30px; /* Adjust as needed */
+    height: 170px; /* Adjust as needed */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    z-index: -1; /* Ensures it doesn't overlap the text */
+}
+
+.arrow3 {
+    position: absolute;
+    right: 30px;
+    top: 0;
+    width: 15px; /* Adjust width and height as needed */
+    height: 15px;
+}
+
+#skills-image3 {
+    flex: 1;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to the top */
+    overflow: hidden
+}
+
+#skill-category3 h3 {
+    font-size: 2em; /* adjust size of skill-category title */
+    text-align: left; /* align title to upper left */
+}
+
+#skill-category3 p {
+    text-align: left;
+    margin-top: 10px;
+}
+
+#skills-list3 p {
+    cursor: pointer;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    font-size: .9em;
+}
+
+#skills-list3 p:hover {
+    font-weight: bold;
+}
+
+#skills-image3 img {
+    width: 400px; /* set specific width */
+    height: 300px; /* set specific height */
+    object-fit: contain; /* ensure image maintains aspect ratio */
+    border-radius: 10px;
+    align-self: center; /* center image */
+}
+
+/* Start of Layout 4 */
+#skills-layout4 {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+#skill-category4 {
+    position: relative;
+    flex: 1;
+    height: 300px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-right: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to the top */
+    overflow-y: auto; /* Enable scrolling if content overflows */
+}
+
+#star-rating4 {
+    position: absolute;
+    bottom: 20px; /* adjust as needed */
+    width: 95%;
+    text-align: left;
+}
+
+#star-rating4 i {
+    font-size: 2.5em; /* adjust as needed */
+}
+
+
+#skills-list4 {
+    position: relative;
+    width: 200px; /* set specific width */
+    height: 300px; /* set specific height */
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-right: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to the top */
+    overflow-y: auto; /* Enable scrolling if content overflows */
+}
+
+#skills-list4::before {
+    content: "";
+    position: absolute;
+    right: 20px; /* Adjust as needed */
+    top: 15px; /* Adjust as needed */
+    width: 30px; /* Adjust as needed */
+    height: 260px; /* Adjust as needed */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    z-index: -1; /* Ensures it doesn't overlap the text */
+}
+
+.arrow4 {
+    position: absolute;
+    right: 30px;
+    top: 0;
+    width: 15px; /* Adjust width and height as needed */
+    height: 15px;
+}
+
+#skills-image4 {
+    flex: 1;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to the top */
+    overflow: hidden
+}
+
+#skill-category4 h3 {
+    font-size: 2em; /* adjust size of skill-category title */
+    text-align: left; /* align title to upper left */
+}
+
+#skill-category4 p {
+    text-align: left;
+    margin-top: 10px;
+}
+
+#skills-list4 p {
+    cursor: pointer;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    font-size: .9em;
+}
+
+#skills-list4 p:hover {
+    font-weight: bold;
+}
+
+#skills-image4 img {
+    width: 400px; /* set specific width */
+    height: 300px; /* set specific height */
+    object-fit: contain; /* ensure image maintains aspect ratio */
+    border-radius: 10px;
+    align-self: center; /* center image */
+}
+
+@keyframes scaleDown {
+    0% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.animatedImage {
+    animation: scaleDown .5s ease-out;
+}
+
+#scrollToTop {
+    position: absolute;
+    right: 20px;  /* Adjust as needed */
+    bottom: 15px;
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: transparent;
+    color: #ddd; /* White text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 8px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 20px; /* Increase font size */
+}
+
+#scrollToTop:hover {
+    background-color: rgba(220, 68, 5); /* Add a dark-grey background on hover */
+}
+
+/* Index HTML --------------------------------------------------------------------*/
+.console {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    width: 40%;
+    min-width: 300px;
+    background-color: #222;
+    color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+    height: 290px;
+}
+
+.console-text {
+    font-family: 'Ubuntu Mono', monospace;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 18px;  /* Adjust this value to change vertical position */
+    text-align: center;
+    width: 100%; /* You may adjust this as per your need */
+    color: #ddd;
+}
+
+.console-header {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.console-header .dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.console-header .red {
+    background-color: #FF605C;
+}
+
+.console-header .yellow {
+    background-color: #FFBD44;
+}
+
+.console-header .green {
+    background-color: #00C48C;
+}
+
+.console-content {
+    font-family: 'Ubuntu Mono', monospace;
+    white-space: pre-line;
+    line-height: 1.6;
+}
+
+.console-content .user {
+    color: rgb(136,224,52); /* Change to your preferred color */
+}
+
+.console-content .asterisk {
+    color: rgb(111,151,192); /* Change to your preferred color */
+}
+
+.block-cursor {
+    display: inline-block;
+    background-color: #fff;
+    width: 0.5em;
+    height: 1em;
+    vertical-align: middle;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    100% { opacity: 1; }
+}
+
+.block-cursor {
+    animation: blink 0.2s steps(1, start) infinite;
+}
+
+.name-display-first {
+    position: absolute;
+    font-size: 40px; /* or any size you want */
+    text-align: left;
+    color: #ddd; /* or any color you want */
+    padding: 10px 0; /* adjust as needed */
+    top: 33%;
+    left: 50%;
+}
+
+.name-display-last {
+    position: absolute;
+    font-size: 40px; /* or any size you want */
+    text-align: left;
+    color: #ddd; /* or any color you want */
+    padding: 10px 0; /* adjust as needed */
+    top: 48%;
+    left: 50%;
+}
+
+.social-links-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* this makes it take the full height of the viewport */
+    margin-left: 120px;
+    margin-top: 60px;
+}
+
+.social-links-home {
+    display: flex;
+    justify-content: center;
+}
+
+.social-links-home a{
+    color: #ddd;
+    margin: 0 10px;
+    font-size: 24px; /* Change the size of the icons here */
+    transition: color 0.3s ease;
+}
+
+.social-links-home a:hover {
+    color: rgba(220, 68, 5); /* Change the color of the icons on hover */
+}
+
+.index-body {
+    overflow: hidden;
+}
+
+

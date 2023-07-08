@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <header>
+        <h1>JH</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutme.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resume.html">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="projects-titles">
+        <div class="project-coding">
+            <h1>Projects</h1>
+            <p>Assortment of projects that I've been working on for the past couple years.</p>
+        </div>
+    </main>
+
+    <main class="projects-container">
+        <div class="project-card" id="project1">
+            <img src="assets/things/pitchmodel.png" alt="Project 1">
+            <h2>Baseball Deep Learning</h2>
+            <p>Inspired by FastAi's Deep Learning for Coders course, a unique pitching database was created. The data aids a video trimming model 
+                that identifies pitcher's handedness, selects suitable video footage, and uses mediapipe to calculate max
+                knee height.</p>
+            <a href="https://github.com/jason-hashimoto/Biomechanics-Projects-2022-2023" class="github-link-button" target="_blank">
+                <i class="fab fa-github"></i>Github</a>
+        </div>
+    
+        <div class="project-card" id="project2">
+            <img src="assets/things/intel.png" alt="Project 2">
+            <h2>Bat Data</h2>
+            <p>This project, initially an interview exercise assigned by Ben Hansen from Intel's Olympic technology group, 
+                was part of an application process for a Biomechanics Intern role. Despite initial struggles, the project 
+                was later revisited as a means to practice Python coding and review forgotten mathematical concepts.</p>
+            <a href="https://github.com/jason-hashimoto/Biomechanics-Projects-2022-2023" class="github-link-button" target="_blank">
+                <i class="fab fa-github"></i>Github</a>
+        </div>
+    
+        <div class="project-card" id="project3">
+            <img src="assets/things/batspeed.png" alt="Project 3">
+            <h2>Bat Speed Analysis</h2>
+            <p>This project was completely inspired by Steve Schuster, Author of Growcasting. His twitter handle is 
+                @growcasting, and his twitter thread focused on using the POI metrics from Driveline Baseball on pitching
+                and attempting to predict pitch velocity. Similarily, this analysis looked at POI metrics on hitting and 
+                attempted to predict bat speed.</p>
+            <a href="https://github.com/jason-hashimoto/Biomechanics-Projects-2022-2023" class="github-link-button" target="_blank">
+                <i class="fab fa-github"></i>Github</a>
+        </div>
+    </main>
+
+    <main class="projects-container">
+        <div class="project-card" id="project4">
+            <img src="assets/things/tiltclock.png" alt="Project 4">
+            <h2>Tilt Clock</h2>
+            <p>This was one of the first projects that I completed in Python. Although extremely rough, at the request of 
+                a coach, he wanted to look at a specific pitcher and whether or not they changed their spin axis from the 
+                previous season. Was a good first step into some more applied python projects.</p>
+            <a href="https://github.com/jason-hashimoto/Biomechanics-Projects-2022-2023" class="github-link-button" target="_blank">
+                <i class="fab fa-github"></i>Github</a>
+        </div>
+    
+        <div class="project-card" id="project5">
+            <img src="assets/things/scouting.png" alt="Project 5">
+            <h2>Scouting Reports</h2>
+            <p>Collection of scouting reports delivered to Oregon State/Knights staff to aid in-game decisions and find 
+                favorable matchups for our team. These are from the 2020/2021 seasons, and have since been updated. Some examples
+                include pitching reports, hitting reports, coaching tendencies, and fielding reports. </p>
+            <a href="assets/things/Scouting Reports.pdf" download class="btn-report">
+                <i class="fas fa-download"></i>Link
+            </a> 
+        </div>
+    
+        <div class="project-card" id="project6">
+            <img src="assets/things/development.png" alt="Project 6">
+            <h2>Development Reports</h2>
+            <p>Collection of player development reports delivered to Oregon State staff to aid in player development/injury monitoring 
+                and execute KPI's identified by staff. Included are wellness reports, pitcher evaluations, K-Motion swing evaluations, 
+                and readiness testing.
+            </p>
+            <a href="assets/things/Development Reports.pdf" download class="btn-report">
+                <i class="fas fa-download"></i>Link
+            </a>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/jason-hashimoto" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/jason-hashimoto" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://twitter.com/jasonhashimoto1" target="_blank"><i class="fab fa-twitter"></i></a>
+            <button id="scrollToTop"><i class="fa-sharp fa-solid fa-arrow-up"></i></button>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets/js/particles.js"></script>
+    <script src="assets/js/scroll.js"></script>
+</body>
+</html>
